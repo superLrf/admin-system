@@ -12,11 +12,13 @@ function createdShopData() {
     const shop_name = '一品鲜螺蛳粉'
     const shop_phone = createdPhone()
     const shop_address = '北海职业学院东门对面'
+    const shop_status = true
     const shop = {
       shop_id,
       shop_name,
       shop_phone,
-      shop_address
+      shop_address,
+      shop_status
     }
     shopList.push(shop)
   }

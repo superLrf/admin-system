@@ -66,7 +66,7 @@
         // 将该用户装换为json数据存储到session中
         this.Storage.session.set('user', JSON.stringify(this.user))
         setTimeout(() => {
-          this.$router.replace('/welcome')
+          this.$router.replace('/admin/container')
         }, 800)
       }
     }
