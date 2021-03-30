@@ -6,7 +6,7 @@
       </div>
 
       <div class="go-container">
-        <el-button>进入后台</el-button>
+        <el-button @click="toBehind">进入后台</el-button>
       </div>
     </div>
   </div>
@@ -31,6 +31,11 @@
         } else {
           this.$message('您还未登录，请登录！')
         }
+      },
+      toBehind() {
+        setTimeout(() => {
+          this.$router.replace("/admin/container")
+        }, 400)
       }
     }
   }

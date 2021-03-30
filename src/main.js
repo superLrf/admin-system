@@ -21,7 +21,10 @@ router.beforeEach((to, from, next) => {
   const user = Storage.session.get('user')
   // 如果没有存在用户并且path不等于/admin/login，则重新调到admin/login
   if(!user && to.path.indexOf('/admin/login') === -1) {
-    router.replace('/admin/login')
+    ElementUI.Message.info("您还未登录，请先登录！")
+    setTimeout(() => {
+      router.replace('/admin/login')
+    }, 400)
   }
   next()
 })
